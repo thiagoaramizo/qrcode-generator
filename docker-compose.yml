@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    image: qrcode-generator:latest
+    container_name: qrcode-generator
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    environment:
+      - SERVER_PORT=3000
